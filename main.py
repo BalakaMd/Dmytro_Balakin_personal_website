@@ -1,15 +1,5 @@
-from flask import Flask, abort, render_template, redirect, url_for, flash, request, send_file
+from flask import Flask, render_template, send_file
 from flask_bootstrap import Bootstrap5
-from flask_ckeditor import CKEditor
-from flask_gravatar import Gravatar
-from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user
-from flask_sqlalchemy import SQLAlchemy
-from functools import wraps
-from werkzeug.security import generate_password_hash, check_password_hash
-from sqlalchemy.orm import relationship
-import os
-
-# Import your forms from the forms.py
 
 # APP Initialization
 app = Flask(__name__)
@@ -23,8 +13,9 @@ def home_page():
 
 @app.route('/download')
 def download_cv():
-    return send_file(path_or_file='static/Resume.pdf', as_attachment=True)
+    return send_file(path_or_file='static/Dmytro_Balakin_-_Junior_Python_Developer.pdf', as_attachment=True)
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run()
