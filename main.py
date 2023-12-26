@@ -13,7 +13,7 @@ def home_page():
 
 @app.route('/download')
 def download_cv():
-    return send_file(path_or_file='static/Dmytro_Balakin-Python_Developer.pdf', as_attachment=True)
+    return send_file(path_or_file='static/Dmytro_Balakin_-_Python_Developer.pdf', as_attachment=True)
 
 
 if __name__ == "__main__":
